@@ -42,3 +42,62 @@ Implement simple Abstract Data Types (ADTs) in Java, use interfaces to define co
 - JUnit tests validate every operation.
 
 ## Project Structure
+
+```
+Lab06/
+├── pom.xml
+└── src/
+    ├── main/java/Tasks/     # ADTs, implementations, demos
+    └── test/java/Tasks/     # JUnit 5 tests
+```
+
+## Requirements
+
+- JDK (the version set in `pom.xml` under `maven.compiler.release`)
+- Apache Maven 3.6+
+- JUnit 5 (downloaded automatically by Maven)
+
+## How to Run
+
+### Run the tests
+
+```bash
+mvn clean test
+```
+
+In NetBeans: right-click the project and choose **Test Project**.
+
+### Run the demos
+
+Each of these classes has its own `main()` method:
+
+```bash
+mvn compile
+java -cp target/classes Tasks.ArrayStack
+java -cp target/classes Tasks.EncapsulationDemo
+java -cp target/classes Tasks.AbstractionDemo
+java -cp target/classes Tasks.LibraryImplementation
+java -cp target/classes Tasks.StudentCollectionImplementation
+```
+
+In NetBeans: right-click the file and choose **Run File**.
+
+## Test Summary
+
+| Test class | Tests |
+|------------|-------|
+| `ArrayStackTest` | 3 |
+| `AbstractionDemoTest` | 3 |
+| `LibraryImplementationTest` | 6 |
+| `StudentCollectionTest` | 5 |
+| **Total** | **17** |
+
+## Key Concepts Demonstrated
+
+- **Abstraction:** interfaces specify *what* an ADT does, not *how*.
+- **Encapsulation:** private fields with public getters hide internal state.
+- **Programming to an interface:** client code uses `List`, `Stack`, `LibrarySystem` and `StudentCollection` types.
+
+## Author
+
+Muhammad Abdur Rehman Khan – 24ABSWE0025
